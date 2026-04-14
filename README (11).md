@@ -1,94 +1,158 @@
-# Credit Risk Prediction 
+# Credit Risk Prediction Using Machine Learning
 
-##  Introduction
+### Loan Prediction Dataset --- Classification Models
 
-This project focuses on predicting whether a loan applicant is likely to
-default on a loan using machine learning techniques. It is designed to
-assist financial institutions in minimizing risk and making better
-lending decisions.
-
-------------------------------------------------------------------------
-
-##  Objective
-
--   Predict loan default probability
--   Analyze applicant financial behavior
--   Build and evaluate classification models
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-orange?logo=scikit-learn)
+![Platform](https://img.shields.io/badge/Platform-Jupyter%20Notebook-yellow?logo=jupyter)
+![Type](https://img.shields.io/badge/Type-Supervised%20Learning-purple)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ------------------------------------------------------------------------
 
-##  Dataset
+## Project Overview
 
-The dataset used is the **Loan Prediction Dataset**. It includes: -
-Applicant Income - Loan Amount - Education Level - Credit History -
-Employment Status
+This project applies **supervised machine learning** to predict whether
+a loan applicant is likely to default. The goal is to help financial
+institutions reduce risk by making smarter lending decisions.
+
+> **Business Problem:** Can we identify high-risk applicants before
+> approving loans to minimize financial losses?
 
 ------------------------------------------------------------------------
 
-##  Project Workflow
+## Objectives
 
-###  Data Preprocessing
+-   Perform **Exploratory Data Analysis (EDA)**
+-   Handle missing values and preprocess data
+-   Build classification models
+-   Evaluate model performance using metrics
+-   Identify key factors affecting loan approval
 
--   Handling missing values
--   Encoding categorical variables
--   Feature scaling
+------------------------------------------------------------------------
 
-###  Exploratory Data Analysis (EDA)
+## Project Structure
 
--   Data visualization (income, loan, education)
--   Correlation analysis
--   Pattern identification
+    credit-risk-prediction/
+    ├── credit_risk_prediction.ipynb
+    ├── README.md
+    └── dataset.csv
 
-###  Model Building
+------------------------------------------------------------------------
 
--   Logistic Regression
--   Decision Tree Classifier
+## Dataset Details
 
-###  Model Evaluation
+  Property    Value
+  ----------- ---------------------------------------
+  Dataset     Loan Prediction Dataset
+  Task Type   Classification
+  Target      Loan Status (Approved / Not Approved)
+
+### Features
+
+  Feature           Description
+  ----------------- -----------------------------------
+  ApplicantIncome   Income of applicant
+  LoanAmount        Loan amount requested
+  Education         Applicant education
+  Credit_History    Credit history (important factor)
+  Employment        Employment status
+
+------------------------------------------------------------------------
+
+## ML Pipeline
+
+    Load Dataset
+         ↓
+    Data Cleaning
+         ↓
+    EDA (Visualization & Analysis)
+         ↓
+    Feature Encoding
+         ↓
+    Train-Test Split
+         ↓
+    Model Training
+         ↓
+    Evaluation
+
+------------------------------------------------------------------------
+
+## Models Used
+
+### Logistic Regression
+
+-   Simple and interpretable model
+-   Works well for binary classification
+
+### Decision Tree
+
+-   Captures non-linear relationships
+-   Easy to visualize and interpret
+
+------------------------------------------------------------------------
+
+## Model Evaluation
 
 -   Accuracy Score
 -   Confusion Matrix
--   Performance comparison
 
 ------------------------------------------------------------------------
 
 ## Results
 
--   The model predicts loan default with good accuracy
--   Important features:
-    -   Credit History
-    -   Applicant Income
-    -   Loan Amount
+-   Credit History is the most important feature
+-   Income and Loan Amount also impact predictions
+-   Model achieves good prediction performance
+
+------------------------------------------------------------------------
+
+## Visualizations
+
+-   Income Distribution
+-   Loan Amount Distribution
+-   Education vs Loan Status
+-   Confusion Matrix
+
+------------------------------------------------------------------------
+
+## Dependencies
+
+``` txt
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+```
+
+Install using:
+
+``` bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
 
 ------------------------------------------------------------------------
 
 ## Skills Demonstrated
 
--   Data Cleaning & Preprocessing
--   Exploratory Data Analysis
--   Machine Learning Modeling
--   Model Evaluation Techniques
+  Skill              Description
+  ------------------ ---------------------------------
+  Data Cleaning      Handling missing values
+  EDA                Data visualization and insights
+  Machine Learning   Classification models
+  Evaluation         Accuracy and confusion matrix
 
 ------------------------------------------------------------------------
 
-##  Future Improvements
+## Future Improvements
 
--   Implement Random Forest / XGBoost
+-   Use Random Forest / XGBoost
 -   Hyperparameter tuning
--   Deploy using Flask or Streamlit
--   Improve dataset quality
-
+-   Deploy model using Flask or Streamlit
 
 ------------------------------------------------------------------------
 
-##  Repository Structure
-
-    ├── data/
-    ├── notebook.ipynb
-    ├── README.md
-    └── requirements.txt
-
-------------------------------------------------------------------------
 
 
 
